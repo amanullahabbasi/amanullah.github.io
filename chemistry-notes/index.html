@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O-Level Chemistry Formula Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #14213d;
+      --ink-soft: #415a77;
+      --paper: #fffdf7;
+      --mist: #f7f3ea;
+      --line: #ddd4c3;
+      --gold: #c7851c;
+      --teal: #007a78;
+      --brick: #b5472f;
+      --olive: #5e7a2f;
+      --berry: #7d3c98;
+      --white: #ffffff;
+      --shadow: 0 16px 40px rgba(20, 33, 61, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(199, 133, 28, 0.12), transparent 30%),
+        linear-gradient(180deg, #f3efe6 0%, #faf8f2 22%, #f7f3ea 100%);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #10213a 0%, #17345d 45%, #214975 100%);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 34px 34px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.22;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      background: #28c2a0;
+      top: -90px;
+      right: -60px;
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      background: #f4b13d;
+      bottom: -70px;
+      left: 28%;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #e5f7f6;
+      background: rgba(0, 122, 120, 0.38);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 14px 0 10px;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(2.5rem, 6vw, 4.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .hero-stat {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 14px 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.5rem;
+      margin-bottom: 2px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 18px;
+      background: rgba(255, 253, 247, 0.92);
+      border: 1px solid rgba(221, 212, 195, 0.95);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar h2,
+    .content h2 {
+      margin: 0 0 14px;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .nav {
+      display: grid;
+      gap: 9px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--mist);
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      border-color: var(--line);
+      transform: translateX(2px);
+    }
+
+    .tip {
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(0, 122, 120, 0.11), rgba(199, 133, 28, 0.12));
+      font-size: 0.92rem;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section {
+      background: rgba(255, 253, 247, 0.95);
+      border: 1px solid rgba(221, 212, 195, 0.95);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, rgba(20, 33, 61, 0.04), rgba(255, 255, 255, 0.3));
+    }
+
+    .badge {
+      min-width: 54px;
+      text-align: center;
+      padding: 5px 8px;
+      border-radius: 999px;
+      color: var(--white);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .tone-gold { background: var(--gold); }
+    .tone-teal { background: var(--teal); }
+    .tone-brick { background: var(--brick); }
+    .tone-olive { background: var(--olive); }
+    .tone-berry { background: var(--berry); }
+    .tone-ink { background: var(--ink); }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .section-body {
+      padding: 20px 22px 22px;
+    }
+
+    .grid-2,
+    .grid-3 {
+      display: grid;
+      gap: 12px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 15px;
+    }
+
+    .card h4 {
+      margin: 0 0 8px;
+      font-size: 0.86rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .formula {
+      background: linear-gradient(180deg, #fff 0%, #fbfaf5 100%);
+      border-left: 4px solid currentColor;
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.95rem;
+    }
+
+    .formula strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .callout {
+      padding: 13px 15px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fffefa;
+    }
+
+    .callout strong {
+      color: var(--ink);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f7f3ea;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    td code,
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.92em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-note {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: #f2efe6;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 1020px) {
+      .layout,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 14px 12px 36px;
+      }
+
+      .hero,
+      .section-head,
+      .section-body {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .grid-2,
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .section,
+      .sidebar {
+        box-shadow: none;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        page-break-after: always;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <span class="eyebrow">Cambridge O-Level Chemistry</span>
+      <h1>Chemistry Formula Sheet</h1>
+      <p>
+        A compact revision page for the concepts, equations, reactions, tests, and trends that most often need
+        memorising before O-Level chemistry exams.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-stat">
+          <strong>21</strong>
+          listed syllabus points
+        </div>
+        <div class="hero-stat">
+          <strong>30+</strong>
+          must-know formulas and relations
+        </div>
+        <div class="hero-stat">
+          <strong>Focused</strong>
+          matched to your screenshot topics
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Contents</h2>
+        <nav class="nav">
+          <a href="#topic-1">1.1-1.2 States and diffusion</a>
+          <a href="#topic-2">2.1-2.4 Matter, atoms and separation</a>
+          <a href="#topic-8">8.2-8.5 Periodic table groups</a>
+          <a href="#topic-bonding">2.5-2.7 Bonding and structure</a>
+          <a href="#topic-3">3.1-3.2 Formulae and relative masses</a>
+          <a href="#topic-7">7.1-7.2 Acids, bases and oxides</a>
+          <a href="#topic-12">12.2-12.4 Titrations and practical work</a>
+        </nav>
+        <div class="tip">
+          Best use: learn one numbered syllabus block at a time, then hide the notes and recite the key facts from memory.
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="section" id="topic-1">
+          <div class="section-head">
+            <span class="badge tone-gold">01</span>
+            <h3>1.1 Solids, Liquids and Gases • 1.2 Diffusion</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="table-wrap">
+              <table>
+                <tr><th>Property</th><th>Solid</th><th>Liquid</th><th>Gas</th></tr>
+                <tr><td>Arrangement</td><td>Closely packed, regular</td><td>Close together, random</td><td>Far apart, random</td></tr>
+                <tr><td>Movement</td><td>Vibrate about fixed positions</td><td>Move around each other</td><td>Rapid random motion</td></tr>
+                <tr><td>Shape</td><td>Fixed</td><td>Takes shape of container</td><td>Fills container</td></tr>
+                <tr><td>Volume</td><td>Fixed</td><td>Fixed</td><td>Not fixed</td></tr>
+                <tr><td>Compressibility</td><td>Very low</td><td>Very low</td><td>High</td></tr>
+              </table>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>State changes</h4>
+                <ul>
+                  <li>Melting and boiling absorb heat energy</li>
+                  <li>Freezing and condensation release heat energy</li>
+                  <li>Pure substances have fixed melting and boiling points</li>
+                  <li>Sublimation: solid to gas directly</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>Diffusion</h4>
+                Net movement of particles from a region of higher concentration to lower concentration. Faster when temperature is higher and particles are lighter.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-2">
+          <div class="section-head">
+            <span class="badge tone-teal">02</span>
+            <h3>2.1 Elements, Compounds and Mixtures • 2.2 Atomic Structure • 2.3 Isotopes • 2.4 Arrangement of Elements and Separation</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="grid-3">
+              <div class="card">
+                <h4>Element</h4>
+                Made of one type of atom only.
+              </div>
+              <div class="card">
+                <h4>Compound</h4>
+                Different elements chemically combined in fixed proportions.
+              </div>
+              <div class="card">
+                <h4>Mixture</h4>
+                Substances physically mixed, not chemically joined, so they can be separated by physical methods.
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>Atomic structure</h4>
+                <ul>
+                  <li>Proton: charge +1, mass 1</li>
+                  <li>Neutron: charge 0, mass 1</li>
+                  <li>Electron: charge -1, mass 1/1840</li>
+                  <li>Atomic number = number of protons</li>
+                  <li>Mass number = protons + neutrons</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>Isotopes</h4>
+                Atoms of the same element with the same proton number but different neutron numbers. Same chemical properties, different mass numbers.
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <tr><th>Separation or arrangement point</th><th>What to remember</th></tr>
+                <tr><td>Arrangement of elements</td><td>Elements are arranged in order of increasing proton number</td></tr>
+                <tr><td>Periods</td><td>Same number of occupied electron shells</td></tr>
+                <tr><td>Groups</td><td>Same number of outer-shell electrons and similar chemical properties</td></tr>
+                <tr><td>Filtration</td><td>Separates insoluble solid from liquid</td></tr>
+                <tr><td>Crystallisation</td><td>Obtains soluble solid from solution</td></tr>
+                <tr><td>Simple distillation</td><td>Obtains solvent or separates liquids with big boiling-point difference</td></tr>
+                <tr><td>Fractional distillation</td><td>Separates miscible liquids with close boiling points</td></tr>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-8">
+          <div class="section-head">
+            <span class="badge tone-ink">03</span>
+            <h3>8.2 Group I • 8.3 Group VII • 8.4 Transition Elements • 8.5 Noble Gases</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="table-wrap">
+              <table>
+                <tr><th>Topic</th><th>Must-know properties</th></tr>
+                <tr><td>Group I</td><td>Soft metals, low density, one outer electron, react with water to form alkaline hydroxide and hydrogen, reactivity increases down group</td></tr>
+                <tr><td>Group VII</td><td>Diatomic non-metals, colored vapors, form halide ions, react with metals, reactivity decreases down group, more reactive halogen displaces less reactive halide</td></tr>
+                <tr><td>Transition elements</td><td>High melting point and density, good conductors, variable oxidation states, colored compounds, catalytic behavior</td></tr>
+                <tr><td>Noble gases</td><td>Monatomic, very unreactive, full outer shell, used in lamps and inert atmospheres</td></tr>
+              </table>
+            </div>
+            <div class="grid-3">
+              <div class="card">
+                <h4>Group I pattern</h4>
+                Outer electron is lost easily, so reactivity increases down the group.
+              </div>
+              <div class="card">
+                <h4>Group VII pattern</h4>
+                Atoms gain one electron to form <code>-1</code> ions, and reactivity decreases down the group.
+              </div>
+              <div class="card">
+                <h4>Displacement idea</h4>
+                Chlorine displaces bromide and iodide. Bromine displaces iodide. Iodine does not displace chloride or bromide.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-bonding">
+          <div class="section-head">
+            <span class="badge tone-berry">04</span>
+            <h3>2.5 Ionic Bonds • 2.5 Simple Molecules and Covalent Bonds • 2.6 Giant Covalent Structures • 2.7 Metallic Bonding</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="grid-3">
+              <div class="card">
+                <h4>Ionic bonding</h4>
+                Electron transfer from metal to non-metal. Strong electrostatic attraction between oppositely charged ions.
+              </div>
+              <div class="card">
+                <h4>Simple covalent molecules</h4>
+                Non-metals share electrons. Low melting and boiling points because forces between molecules are weak.
+              </div>
+              <div class="card">
+                <h4>Metallic bonding</h4>
+                Positive ions in a lattice with delocalised electrons. This explains conductivity and malleability.
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <tr><th>Structure type</th><th>Typical properties</th><th>Examples</th></tr>
+                <tr><td>Ionic lattice</td><td>High melting point; conducts when molten or aqueous; brittle</td><td>NaCl, MgO</td></tr>
+                <tr><td>Simple molecular</td><td>Low melting point; poor conductor</td><td>CO₂, CH₄, H₂O</td></tr>
+                <tr><td>Giant covalent</td><td>Very high melting point; usually poor conductor</td><td>Diamond, SiO₂</td></tr>
+                <tr><td>Metallic lattice</td><td>Good conductor; malleable; ductile</td><td>Cu, Al, Fe</td></tr>
+              </table>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>Graphite</h4>
+                Each carbon bonds to three others. One delocalised electron per atom, so it conducts electricity. Layers slide, so it is soft.
+              </div>
+              <div class="card">
+                <h4>Diamond</h4>
+                Each carbon bonds to four others. Very hard, very high melting point, does not conduct.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-3">
+          <div class="section-head">
+            <span class="badge tone-gold">05</span>
+            <h3>3.1 Formulae, Equations and Ionic Equations • 3.2 Relative Masses of Atoms and Molecules</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="grid-2">
+              <div class="card">
+                <h4>Formulae and equations</h4>
+                Learn how to write correct chemical formulae, balance symbol equations, and write ionic equations by removing spectator ions.
+              </div>
+              <div class="card">
+                <h4>Relative masses</h4>
+                <code>M<sub>r</sub></code> is the sum of all relative atomic masses in a molecule or formula unit.
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="formula" style="color: var(--gold);">
+                <strong>Relative formula mass</strong>
+                M<sub>r</sub> = sum of A<sub>r</sub> values
+              </div>
+              <div class="formula" style="color: var(--teal);">
+                <strong>Average atomic mass</strong>
+                A<sub>r</sub> = Σ(isotope mass × % abundance) / 100
+              </div>
+              <div class="formula" style="color: var(--brick);">
+                <strong>Ionic equation tip</strong>
+                Keep only ions that actually change
+              </div>
+            </div>
+            <div class="callout">
+              <strong>Balancing rule:</strong> total atoms and total charge must balance. Change coefficients, never subscripts.
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-7">
+          <div class="section-head">
+            <span class="badge tone-brick">06</span>
+            <h3>7.1 Characteristic Properties of Acids and Bases • 7.2 Oxides</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="grid-3">
+              <div class="card">
+                <h4>Definitions</h4>
+                Acid produces <code>H⁺</code> in water. Base neutralises acid. Alkali is a soluble base producing <code>OH⁻</code>.
+              </div>
+              <div class="card">
+                <h4>pH ideas</h4>
+                Low pH is acidic, 7 is neutral, high pH is alkaline.
+              </div>
+              <div class="card">
+                <h4>Oxides</h4>
+                Metal oxides are usually basic. Non-metal oxides are usually acidic. Some, like Al₂O₃ and ZnO, are amphoteric.
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <tr><th>Reaction pattern</th><th>Products</th></tr>
+                <tr><td>Acid + metal</td><td>Salt + hydrogen</td></tr>
+                <tr><td>Acid + base</td><td>Salt + water</td></tr>
+                <tr><td>Acid + carbonate</td><td>Salt + water + carbon dioxide</td></tr>
+                <tr><td>Acid + ammonia</td><td>Ammonium salt</td></tr>
+              </table>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>Salt names from acids</h4>
+                Hydrochloric acid gives chlorides, nitric acid gives nitrates, sulfuric acid gives sulfates, ethanoic acid gives ethanoates.
+              </div>
+              <div class="card">
+                <h4>Preparation methods</h4>
+                Titration for soluble salts from alkalis. Add excess insoluble base or metal, then filter and crystallise, for many other soluble salts.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="topic-12">
+          <div class="section-head">
+            <span class="badge tone-ink">07</span>
+            <h3>12.2 Acid-Base Titrations • 12.3 Experimental Design • 12.4 Chromatography</h3>
+          </div>
+          <div class="section-body stack">
+            <div class="grid-2">
+              <div class="formula" style="color: var(--brick);">
+                <strong>Titration relation</strong>
+                c₁V₁ / n₁ = c₂V₂ / n₂
+              </div>
+              <div class="card">
+                <h4>Concordant titres</h4>
+                Ignore the rough result and average titres that are close together, often within <code>0.10 cm³</code>.
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>Experimental design</h4>
+                Identify variables, control conditions carefully, repeat readings, and suggest improvements for accuracy, precision, and safety.
+              </div>
+              <div class="formula" style="color: var(--teal);">
+                <strong>Chromatography</strong>
+                Rf = distance moved by substance / distance moved by solvent
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <tr><th>Practical skill</th><th>Key idea to remember</th></tr>
+                <tr><td>Titration setup</td><td>Pipette fixed volume into conical flask, add indicator, run solution from burette to end-point</td></tr>
+                <tr><td>End-point</td><td>Permanent color change</td></tr>
+                <tr><td>Chromatography baseline</td><td>Draw in pencil so it does not dissolve</td></tr>
+                <tr><td>Chromatography solvent</td><td>Solvent level must start below the spots</td></tr>
+              </table>
+            </div>
+            <div class="grid-2">
+              <div class="card">
+                <h4>Gas tests</h4>
+                <ul>
+                  <li>Hydrogen: squeaky pop with lighted splint</li>
+                  <li>Oxygen: relights glowing splint</li>
+                  <li>Carbon dioxide: turns limewater milky</li>
+                  <li>Chlorine: bleaches damp litmus paper</li>
+                  <li>Ammonia: turns damp red litmus blue</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h4>Flame tests</h4>
+                Lithium crimson, sodium yellow, potassium lilac, calcium orange-red, copper blue-green.
+              </div>
+            </div>
+            <div class="footer-note">
+              This version now tracks the topic list from your screenshot much more closely. I kept the notes compact and exam-centered so it works as a real revision sheet rather than a full textbook.
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
